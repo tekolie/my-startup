@@ -1,0 +1,13 @@
+$tee-color: gray;
+$gee-color: white;
+
+body{
+    background-color: $tee-color;
+    background-image: url(./img/bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $gee-color;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
