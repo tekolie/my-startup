@@ -1,4 +1,4 @@
-## FMy Starter List
+## My Starter List
 
 ### Webpack Plugins: ###
 
