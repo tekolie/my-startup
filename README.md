@@ -10,3 +10,21 @@
     - [regex101](https://regex101.com/)
     - [RegExr](http://regexr.com/)
     - [Regexper](https://regexper.com/)
+
+
+
+### VS Plugins: ###
+- .ejs (by Qassim Faird)
+- Algin (by steve8708)
+- Auto Close Tag (by Jun Han)
+- Auto Rename Tage (by Jun Han)
+- Beautify (by HookyQR)
+- Beautify css/sass/scss/less (by michelemelluso)
+- Copy Relative Path (by alexdima)
+- Icon fonts (by idleberg)
+- jsx (by TwentyChung)
+- Path Intellisense (by Christian Kohler)
+- react-beautify (by taichi)
+- Sass (by Robin Bentley)
+- Charcoal Oceanic Next (by Josh Peng)
+- Sublime Babel (by Josh Peng)
