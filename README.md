@@ -12,7 +12,6 @@
     - [Regexper](https://regexper.com/)
 
 
-
 ### VS Plugins: ###
 - .ejs (by Qassim Faird)
 - Algin (by steve8708)
@@ -28,3 +27,8 @@
 - Sass (by Robin Bentley)
 - Charcoal Oceanic Next (by Josh Peng)
 - Sublime Babel (by Josh Peng)
+
+
+### React Modules: ###
+
+- [semantic](https://react.semantic-ui.com/introduction)
