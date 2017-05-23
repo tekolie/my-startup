@@ -8,9 +8,9 @@ exports.devServer = ({ host, port } = {}) => ({
     port, // Defaults to 8080
     overlay: {
       errors: true,
-      warnings: true
-    }
-  }
+      warnings: true,
+    },
+  },
 });
 
 exports.lintJavaScript = ({ include, exclude, options }) => ({
@@ -23,10 +23,10 @@ exports.lintJavaScript = ({ include, exclude, options }) => ({
         enforce: 'pre',
 
         loader: 'eslint-loader',
-        options
-      }
-    ]
-  }
+        options,
+      },
+    ],
+  },
 });
 
 exports.loadCSS = ({ include, exclude } = {}) => ({

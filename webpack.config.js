@@ -10,9 +10,7 @@ const PATHS = {
 
 const commonConfig = merge([
     {
-        entry: {
-            vendor: ['react']
-        },
+        entry: PATHS.app + '/index.js',
         output: {
             path: PATHS.build,
             filename: '[name].js',
