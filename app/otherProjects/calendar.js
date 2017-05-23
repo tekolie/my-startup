@@ -42,7 +42,7 @@ class Calendar {
       const height = convTime.getTotalHrs();
 
       const calDiv = new Event(this.cal);
-      calDiv.setLabel(res.title);
+      calDiv.setLabel(res.notes);
       calDiv.setTitle(convTime.getFullTime());
       calDiv.setMeta(top, leftPost, height);
     });

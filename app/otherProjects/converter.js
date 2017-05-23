@@ -1,9 +1,8 @@
 class TimeConverter {
   constructor(obj) {
     this.data = {};
-    if(obj){
+    if(obj)
       this.toDateObj(obj);
-    }
   }
 
   toDateObj(obj) {
@@ -36,9 +35,7 @@ class TimeConverter {
     } else {
       this.data.endDate.setHours(newStart);
       this.data.endDate.setMinutes(newEnd);
-    }
-
-    
+    }    
   }
 
   getStartMins() {

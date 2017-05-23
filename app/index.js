@@ -15,17 +15,22 @@ const data = [
   {
     'startDate': '2017-05-23 01:00',
     'endDate': '2017-05-23 02:00',
-    'title': 'Choir rehearsal',
+    'notes': 'Choir rehearsal',
   },
   {
     'startDate': '2017-05-23 03:00',
     'endDate': '2017-05-23 03:30',
-    'title': 'Job Interview',
+    'notes': 'Job Interview',
   },
   {
     'startDate': '2017-05-23 05:00',
     'endDate': '2017-05-23 08:30',
-    'title': 'Singing lessons',
+    'notes': 'Singing lessons',
+  },
+  {
+    'startDate': '2017-05-23 10:00',
+    'endDate': '2017-05-23 12:30',
+    'notes': 'oops! Singing lessons',
   },
 ];
 
