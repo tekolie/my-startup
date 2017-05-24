@@ -11,16 +11,14 @@ class TimeConverter {
   }
 
   setWithMins({ startMins, endMins }){
-    let isToHrs = false;
-
+    let isHrs = false;
     let newEnd = endMins;
     let newStart = Math.ceil(startMins / 60);
-    
 
     if(newEnd >= 60){
+      isHrs = true;
       let totalMins = (endMins + startMins);
       newEnd = (totalMins / 60);
-      isToHrs = true;
     }
     
     this.data.startDate = new Date();
@@ -29,13 +27,16 @@ class TimeConverter {
     this.data.startDate.setHours(newStart);
     this.data.startDate.setMinutes(0);
 
-    if(isToHrs){
-      this.data.endDate.setHours(newEnd);
-      this.data.endDate.setMinutes(0);
-    } else {
-      this.data.endDate.setHours(newStart);
-      this.data.endDate.setMinutes(newEnd);
-    }    
+    this.data.endDate.setHours( (isHrs) ? newEnd : newStart);
+    this.data.endDate.setMinutes((isHrs) ? this.getMinsFromHrs(newEnd) : newEnd);   
+  }
+
+  getMinsFromHrs(intVal){
+    if(intVal >= 60) {
+      return intVal;
+    }
+    let toMins = (intVal % 1) * 60;
+    return toMins;
   }
 
   getStartMins() {
@@ -55,7 +56,7 @@ class TimeConverter {
     return total;
   }
 
-  getFullTime() {
+  getTimeRangeFormat() {
     const { startDate, endDate } = this.data;
     let from = `${this.formatNum(startDate.getHours())}:${this.formatNum(startDate.getMinutes())}`;
     let to = `${this.formatNum(endDate.getHours())}:${this.formatNum(endDate.getMinutes())}`;

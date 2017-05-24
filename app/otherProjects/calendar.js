@@ -9,13 +9,7 @@ class Calendar {
       mHeight: 30,
       prevX: 0,
       prevY: 0,
-      isDone: false,
-      single: {
-        mouseDwn: false,
-        prevX: 0,
-        prevY: 0,
-      },
-      events: [],
+      isDragging: false,
     };
     this.domApp = parentNode;
     this.cal = document.createElement('div');
@@ -34,18 +28,21 @@ class Calendar {
   }
 
   setData(data) {
-    data.forEach((res) => {
-      const convTime = new TimeConverter(res);
+    if(data.length > 0){
+      data.forEach((res) => {
+        const convTime = new TimeConverter(res);
 
-      const top = convTime.getStartMins();
-      const leftPost = 50;
-      const height = convTime.getTotalHrs();
+        const top = convTime.getStartMins();
+        const leftPost = 50;
+        const height = convTime.getTotalHrs();
 
-      const calDiv = new Event(this.cal);
-      calDiv.setLabel(res.notes);
-      calDiv.setTitle(convTime.getFullTime());
-      calDiv.setMeta(top, leftPost, height);
-    });
+        const calDiv = new Event(this.cal);
+        calDiv.setLabel(res.notes);
+        calDiv.setTitle(convTime.getTimeRangeFormat());
+        calDiv.setMeta(top, leftPost, height);
+        calDiv.showInCal();
+      });
+    }
   }
 
   resetData() {
@@ -65,17 +62,10 @@ class Calendar {
     let calHr;
 
     for (var i = 0; i < 24; i++) {
-      if (i <= 9) {
-        calHr = this.setHour({
-          start: this.setMins('start', `0${i}:00`, this.data.mHeight),
-          end: this.setMins('end', '', this.data.mHeight),
-        });
-      } else {
-        calHr = this.setHour({
-          start: this.setMins('start', `${i}:00`, this.data.mHeight),
-          end: this.setMins('end', '', this.data.mHeight),
-        });
-      }
+      calHr = this.setHour({
+        start: this.setMins('start', `${this.formatNum(i)}:00`, this.data.mHeight),
+        end: this.setMins('end', '', this.data.mHeight),
+      });
 
       this.cal.appendChild(calHr);
     }
@@ -102,10 +92,11 @@ class Calendar {
    * EVENTS 
    */
   handleMouseDwn(e) {
+    this.data.isDragging = false;
     if (!this.data.isMouseDwn) {
       this.data.isMouseDwn = true;
-      let tee = (e.pageY - 20);
-      let topPos = Math.ceil((tee + 1) / 10 ) * 10;
+      let topPos = (e.pageY - 20);
+      topPos = Math.ceil((topPos + 1) / 10 ) * 10;
       let leftPos = 50;
 
       if (leftPos <= 49) {
@@ -123,13 +114,18 @@ class Calendar {
   }
 
   handleMouseMove(e) {
-    if (this.data.isMouseDwn) {
+    console.log('handleMouseMove');
+    this.data.isDragging = true;
+    if (this.data.isDragging  && this.data.isMouseDwn) {
       let mx = e.pageY - this.data.prevY;
-      this.calEvnt.style.height = `${mx}px`;
+      mx = Math.ceil((mx + 1) / 10 ) * 10;
+      this.calDiv.showInCal();
+      this.calDiv.setHeight(mx);
     }
   }
 
   handleMouseUp(e) {
+    this.data.isDragging = false;
     if (this.data.isMouseDwn) {
       $(this.cal).off('mousemove');
       this.calDiv.setLabel('');
@@ -139,10 +135,17 @@ class Calendar {
         startMins: e.target.offsetTop,
         endMins: e.target.offsetHeight,
       });
-      this.calDiv.setTitle(convTime.getFullTime());
+      this.calDiv.setTitle(convTime.getTimeRangeFormat());
       this.calDiv.editEvent();
       this.resetData();
     }
+  }
+
+  formatNum(intVal){
+    if((intVal).toString().length === 1){
+      return '0' + intVal;
+    }
+    return intVal;
   }
 }
 

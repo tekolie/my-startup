@@ -7,6 +7,12 @@ document.body.appendChild(component());*/
 import Calendar from './otherProjects/calendar';
 import './otherProjects/cal-style.scss';
 
+// Add BootStrap
+const linkRel = document.createElement('link');
+linkRel.setAttribute('rel','stylesheet');
+linkRel.setAttribute('href','https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+document.head.appendChild(linkRel);
+
 const domApp = document.createElement('div');
 domApp.id = 'app';
 document.body.appendChild(domApp);
@@ -19,18 +25,8 @@ const data = [
   },
   {
     'startDate': '2017-05-23 03:00',
-    'endDate': '2017-05-23 03:30',
+    'endDate': '2017-05-23 04:00',
     'notes': 'Job Interview',
-  },
-  {
-    'startDate': '2017-05-23 05:00',
-    'endDate': '2017-05-23 08:30',
-    'notes': 'Singing lessons',
-  },
-  {
-    'startDate': '2017-05-23 10:00',
-    'endDate': '2017-05-23 12:30',
-    'notes': 'oops! Singing lessons',
   },
 ];
 
