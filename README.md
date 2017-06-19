@@ -20,6 +20,7 @@
 - Auto Rename Tag (by Jun Han)
 - Beautify (by HookyQR)
 - Beautify css/sass/scss/less (by michelemelluso)
+- Material Theme (by Mattia Astorino)
 - Copy Relative Path (by alexdima)
 - Icon fonts (by idleberg)
 - jsx (by TwentyChung)
