@@ -38,7 +38,7 @@
 ```javascript
 {
     "workbench.colorTheme": "Atom One Dark",
-	"workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.iconTheme": "eq-material-theme-icons",
     "editor.fontSize": 14,
     "editor.minimap.enabled": false,
     "editor.minimap.renderCharacters": false,
