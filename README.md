@@ -17,7 +17,7 @@
 - .ejs (by Qassim Faird)
 - Algin (by steve8708)
 - Auto Close Tag (by Jun Han)
-- Auto Rename Tage (by Jun Han)
+- Auto Rename Tag (by Jun Han)
 - Beautify (by HookyQR)
 - Beautify css/sass/scss/less (by michelemelluso)
 - Copy Relative Path (by alexdima)
@@ -26,7 +26,6 @@
 - Path Intellisense (by Christian Kohler)
 - react-beautify (by taichi)
 - Sass (by Robin Bentley)
-- Charcoal Oceanic Next (by Josh Peng)
 - Sublime Babel (by Josh Peng)
 
 
