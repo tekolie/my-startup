@@ -13,6 +13,7 @@
 
 
 ### VS Plugins: ###
+- Atom One Dark Syntax Theme (by Andreas Scherer)
 - .ejs (by Qassim Faird)
 - Algin (by steve8708)
 - Auto Close Tag (by Jun Han)
