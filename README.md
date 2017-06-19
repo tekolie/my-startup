@@ -32,3 +32,33 @@
 ### React Modules: ###
 
 - [semantic](https://react.semantic-ui.com/introduction)
+
+
+### VS Settings: ###
+
+{
+    "workbench.colorTheme": "Atom One Dark",
+	"workbench.iconTheme": "eq-material-theme-icons",
+    "editor.fontSize": 14,
+    "editor.minimap.enabled": false,
+    "editor.minimap.renderCharacters": false,
+    "explorer.openEditors.visible": 0,
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#21252b",
+        "tab.inactiveBackground": "#21252b",
+        "tab.border": "#000",
+        "panel.background": "#21252b",
+        "sideBar.background": "#21252b",
+        "editor.selectionBackground": "#135564", //For when you highlight a selection
+        "editor.selectionHighlightBackground": "#135564" //For when the editor highlights all similar words
+    },
+    "editor.selectionHighlight": true,
+    "editor.renderLineHighlight": "line",
+    "editor.occurrencesHighlight": true,
+    "editor.wordWrap": "on",
+    "javascript.validate.enable": true,
+    "typescript.check.npmIsInstalled": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false
+}
