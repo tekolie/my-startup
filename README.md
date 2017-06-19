@@ -12,7 +12,7 @@
     - [Regexper](https://regexper.com/)
 
 
-### VS Plugins: ###
+### VSC Plugins: ###
 - Atom One Dark Syntax Theme (by Andreas Scherer)
 - .ejs (by Qassim Faird)
 - Algin (by steve8708)
@@ -35,7 +35,7 @@
 - [semantic](https://react.semantic-ui.com/introduction)
 
 
-### VS Settings: ###
+### VSC Settings: ###
 ```javascript
 {
     "workbench.colorTheme": "Atom One Dark",
