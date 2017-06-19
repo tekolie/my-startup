@@ -35,7 +35,7 @@
 
 
 ### VS Settings: ###
-
+```javascript
 {
     "workbench.colorTheme": "Atom One Dark",
 	"workbench.iconTheme": "eq-material-theme-icons",
@@ -62,3 +62,4 @@
     "editor.insertSpaces": false,
     "editor.detectIndentation": false
 }
+```
