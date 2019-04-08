@@ -1,41 +1,51 @@
-.BasicHeader, .ParametersRunButton, .JTable-header {
-    display: none;
+.BasicHeader,
+.ParametersRunButton,
+.JTable-header {
+  display: none;
 }
 
-.JTable.u-table-maxwidth, .activity {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
+.JTable.u-table-maxwidth,
+.activity {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px;
 }
 
-.JTable-row.JTable-row--rollOver .JTable-cell:nth-child(2), .JTable-row.JTable-row--rollOver .JTable-cell:nth-child(3) {
-    display: none;
+.JTable-row.JTable-row--rollOver .JTable-cell:nth-child(2),
+.JTable-row.JTable-row--rollOver .JTable-cell:nth-child(3) {
+  display: none;
 }
 
 .JTable-row.JTable-row--rollOver .JTable-cell {
-    text-transform: uppercase;
-    flex: 1;
+  text-transform: uppercase;
+  flex: 1;
 }
 
 .JTable-cell {
-    height: 100px;
-    font-size: 20px;
+  height: 100px;
+  font-size: 20px;
 }
 
 .JTable-cell svg {
-    width: 80px;
-    height: 80px;
+  width: 60px;
+  height: 60px;
 }
 
 .JTable-row.JTable-row--rollOver .JTable-cell:nth-child(4) {
-    flex: 2;
+  flex: 2;
 }
 
 .JTable-row.JTable-row--rollOver:nth-child(even) {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .JTable-row.JTable-row--rollOver:nth-child(even) .svgResultStatus > circle {
-    stroke: #f1f1f1;
+  stroke: #f1f1f1;
 }
 
+.JTable-row.JTable-row--rollOver
+  .JTable-cell:nth-child(1)
+  .JTable-cell-contents
+  > div {
+  margin: 0 auto;
+}
