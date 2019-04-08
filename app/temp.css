@@ -1,7 +1,15 @@
-.BasicHeader,
+.BasicHeader .Header-topNav-inner .u-flex-grow,
+.BasicHeader .Header-topNav-inner nav,
+.BasicHeader .Header-topNav-inner .ContentPageHeader-user,
+.BasicHeader .Header-details,
 .ParametersRunButton,
 .JTable-header {
   display: none;
+}
+
+.BasicHeader .Header-topNav-inner .jenkins-header-logo {
+  text-align: center;
+  margin: 0 auto;
 }
 
 .JTable.u-table-maxwidth,
